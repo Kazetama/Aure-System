@@ -26,7 +26,7 @@ class DataStudentController extends Controller
 
         $students = $query->orderBy('name', 'asc')->paginate(10)->withQueryString();
 
-        return Inertia::render('Admin/Students/Index', [
+        return Inertia::render('admin/students/index', [
             'students' => $students,
             'filters' => $request->only('search'),
         ]);
@@ -35,7 +35,7 @@ class DataStudentController extends Controller
     // Halaman edit data siswa
     public function edit(Student $student)
     {
-        return Inertia::render('Admin/Students/Edit', [
+        return Inertia::render('admin/students/edit', [
             'student' => $student,
         ]);
     }
