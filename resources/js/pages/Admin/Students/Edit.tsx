@@ -3,20 +3,7 @@ import { FormEventHandler } from "react";
 import { Save, ArrowLeft } from "lucide-react";
 import AppLayout from "@/layouts/app-layout";
 import { type BreadcrumbItem } from "@/types";
-
-// Interface 'Student' dan 'Props' tidak berubah
-interface Student {
-    id: number;
-    uid_card: string;
-    name: string;
-    image?: string;
-    parent_phone?: string;
-    address?: string;
-    class?: string;
-    major?: string;
-    email?: string;
-    is_active: boolean;
-}
+import { type Student } from "@/types";
 
 interface Props {
     student: Student;

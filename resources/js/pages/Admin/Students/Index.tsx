@@ -3,22 +3,10 @@ import { Head, Link, router } from "@inertiajs/react";
 import AppLayout from "@/layouts/app-layout";
 import { dashboard } from "@/routes";
 import { type BreadcrumbItem } from "@/types";
-import { Search, Edit, UserX, Plus, Trash } from "lucide-react"; // Assuming lucide-react for icons
+import { Search, Edit, UserX, Plus, Trash } from "lucide-react";
+import { type Student } from "@/types";
 
-// Interface for Student (as provided)
-interface Student {
-    id: number;
-    uid_card: string;
-    name: string;
-    email: string;
-    class: string;
-    major: string;
-    parent_phone: string;
-    address: string;
-    is_active: boolean;
-}
 
-// Interface for PageProps (as provided)
 interface PageProps {
     students: {
         data: Student[];
